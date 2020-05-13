@@ -32,8 +32,7 @@
 	THE SOFTWARE.
 */
 
-/* Settings *\
-\*==========*/
+/* Settings */
 var settings = {
 	"navigation": {
 		"newWindow": true
@@ -63,8 +62,7 @@ var settings = {
 	}
 };
 
-/*  Clock  *\
-\*=========*/
+/*  Clock  */
 function updateClock() {
 	var currentTime = new Date ();
 	var currentHours = currentTime.getHours ();
@@ -103,20 +101,16 @@ $(document).ready(function() {
 
 	var shortcuts = {};
 	
-	/*  Get Links  *\
-	\*=============*/
+	/*  Get Links  */
 	var linkString = $('body').text();
 
-	/*  Clear Page  *\
-	\*==============*/
+	/*  Clear Page  */
 	$('body').empty();
 
-	/*  Create Array from linkString  *\
-	\*================================*/
+	/*  Create Array from linkString  */
 	var linkArray = linkString.split("\n");
 
-	/*  Go thru Array  *\
-	\*=================*/
+	/*  Go thru Array  */
 	var i;
 	var count = 1;
 	var html = '';
@@ -130,9 +124,7 @@ $(document).ready(function() {
 		// If line is empty, skip
 		if(!line) continue;
 
-		/*  If it doesn't contain "://",  *\
-		|*  it's not a URL                *|
-		\*================================*/
+		/*  If it doesn't contain "://", it's not a URL */
 		if(/:\/\//.test(line) != true) {
 			if(count > 1) {
 				html = html + '</div>';
@@ -142,8 +134,7 @@ $(document).ready(function() {
 			continue;
 		}
 
-		/*  Split URL, Title and icon (if any) *\
-		\*=======================*/
+		/*  Split URL, Title and icon (if any) */
 		var lineArray = line.split(" || ");
 		var url = lineArray[0];
 		var title = lineArray[1];
@@ -153,14 +144,12 @@ $(document).ready(function() {
 			icon = lineArray[3];
 		}
 		
-		/*  Add to shortcuts array *\
-		\*=========================*/
+		/*  Add to shortcuts array */
 		if(lineArray[2]) {
 			shortcuts[lineArray[2]] = "'"+url+"'";
 		}
 
-		/* Prepares HTML code for showing icon *\
-		\*=====================================*/
+		/* Prepares HTML code for showing icon */
 		var iconHtml = '';
 		if (settings.icons.showIcons && icon) {
 			iconHtml = '<img src="' + icon + '"/>'; 
