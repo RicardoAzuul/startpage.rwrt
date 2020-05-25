@@ -53,6 +53,10 @@ var settings = {
 		"showClock": true
 	},
 
+	"weather": {
+		"showWeather": true
+	},
+
 	"animation": {
 		"hideLinks": true
 	},
@@ -88,6 +92,18 @@ function updateClock() {
 	// Fill '#clock' div with time
 	$("#clock").html(currentTimeString);
 }
+
+/*  Weather  */
+function updateWeather() {
+
+	// Compose the string for display
+	var currentString = 'Bla';
+
+	// Fill '#clock' div with time
+	$("#weather").html(currentString);
+}
+
+
 
 function searchBox(url, name, placeholder) {
 	var string = '<form method="get" action="' + url + '">'
@@ -219,9 +235,7 @@ $(document).ready(function() {
 		$(searchDiv.firstChild.firstChild).focus();
 	}
  
-	/*  Clock  *\
-	\*=========*/
-
+	/*  Clock  */
 	if(settings.clock.showClock) {
 		// Add empty '#clock' div
 		$('body').append('<div id="clock"></div>');
@@ -230,6 +244,14 @@ $(document).ready(function() {
 		setInterval('updateClock()', 1000);
 	}
 
+		/*  Weather  */
+		if(settings.weather.showWeather) {
+			// Add empty '#weather' div
+			$('body').append('<div id="weather"></div>');
+	
+			// Update clock
+			setInterval('updateWeather()', 1000);
+		}
 
 	/*  Keybindings  *\
 	\*===============*/

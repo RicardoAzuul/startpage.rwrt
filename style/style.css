@@ -89,6 +89,13 @@ li img {
 	font-size: 2em;
 }
 
+#weather {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	font-size: 2em;
+}
+
 form {
 	margin-top: 1em;
 }
