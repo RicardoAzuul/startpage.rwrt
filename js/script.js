@@ -97,10 +97,10 @@ function updateClock() {
 function updateWeather() {
 
 	// Compose the string for display
-	var currentString = 'Bla';
+	var codeBlock = '<img src="https://www.theweather.com/wimages/foto798c6d5a6c54993633678125d03c66cd.png">'
 
-	// Fill '#clock' div with time
-	$("#weather").html(currentString);
+	// Fill '#weather' div with weather
+	$("#weather").html(codeBlock);
 }
 
 
@@ -247,10 +247,10 @@ $(document).ready(function() {
 		/*  Weather  */
 		if(settings.weather.showWeather) {
 			// Add empty '#weather' div
-			$('body').append('<div id="weather"></div>');
+			$('body').append('<div id="weather"><img src="https://www.theweather.com/wimages/foto798c6d5a6c54993633678125d03c66cd.png"></div>');
 	
-			// Update clock
-			setInterval('updateWeather()', 1000);
+			// Update weather
+			setInterval('updateWeather()', 900000);
 		}
 
 	/*  Keybindings  *\
