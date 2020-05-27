@@ -50,7 +50,7 @@ var settings = {
 	},
 	
 	"clock": {
-		"showClock": true
+		"showClock": false
 	},
 
 	"weather": {
