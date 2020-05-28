@@ -55,6 +55,19 @@ a:hover {
 	width: 160px;														/* Link block width */
 }
 
+/* Slideshow, for reminders */
+.slider {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	overflow-x: auto;
+  }
+  .slide {
+	width: 300px;
+	flex-shrink: 0;
+	height: 100%;
+  }
+
 h1 {
 	margin: 0;
 	font-size: 1.5em;												/* Title size */
