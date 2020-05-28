@@ -57,6 +57,11 @@ var settings = {
 		"showWeather": true
 	},
 
+	// Does nothing right now
+	"slider": {
+		"showSlider": true
+	},
+
 	"animation": {
 		"hideLinks": true
 	},
@@ -102,8 +107,6 @@ function updateWeather() {
 	// Fill '#weather' div with weather
 	$("#weather").html(codeBlock);
 }
-
-
 
 function searchBox(url, name, placeholder) {
 	var string = '<form method="get" action="' + url + '">'
@@ -252,6 +255,7 @@ $(document).ready(function() {
 			// Update weather
 			setInterval('updateWeather()', 900000);
 		}
+
 
 	/*  Keybindings  *\
 	\*===============*/
