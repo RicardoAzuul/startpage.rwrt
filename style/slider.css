@@ -1,6 +1,11 @@
 .slider {
     width: 300px;
     height: 300px;
+    position: relative;
+    top: 20em;
+    bottom: 20em;
+    left: 20em;
+    right: 20em;
     display: flex;
     overflow-x: auto;
   }
@@ -8,4 +13,5 @@
     width: 300px;
     flex-shrink: 0;
     height: 100%;
+    text-align: center;
   }
